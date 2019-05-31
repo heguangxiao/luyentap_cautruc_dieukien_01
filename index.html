@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen Tap</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button" id="btap1" value="Bai 1" onclick="btap1();"/>
+    <br/>
+    <input type="button" id="btap2" value="Bai 2" onclick="btap2();"/>
+    <br/>
+    <input type="button" id="btap3" value="Bai 3" onclick="btap3();"/>
+    <br/>
+    <input type="button" id="btap4" value="Bai 4" onclick="btap4();"/>
+    <br/>
+    <input type="button" id="btap5" value="Bai 5" onclick="btap5();"/>
+    <br/>
+    <input type="button" id="btap6" value="Bai 6" onclick="btap6();"/>
+    <br/>
+    <input type="button" id="btap7" value="Bai 7" onclick="btap7();"/>
+    <br/>
+    <p class="red">Ha Quang Hieu . C0519i2</p>
+
+    <script>
+        function btap7() {
+            let a = parseInt(prompt('nhap so phut ban da goi trong thang :'));
+            let phi;
+            if(a>200){
+                phi = (a-200)*200+150*400+50*600;
+            } else if (a>50){
+                phi = (a-50)*400+50*600;
+            } else {
+                phi = a *600;
+            }
+            alert('thang nay ban da goi '+a+' phut nen phai tra phi la '+(phi+25000));
+        }
+        
+        function btap6() {
+            let a = prompt('nhap doanh so ban hang :');
+
+            if (a>=10000000){
+                alert('ban duoc hoa hong 10% = ' + (a/10))
+            } else if (a>=5000000){
+                alert('ban duoc hoa hong 5% = '+ (a/20))
+            } else if(a>=2000000){
+                alert('ban duowc hoa hong 2% = '+ (a/50))
+            } else{
+                alert('ban khong co hoa hong')
+            }
+        }
+        
+        function btap5() {
+            let a = parseInt(prompt('Nhap diem bai kiem tra 1 : '));
+            let b = parseInt(prompt('Nhap diem bai kiem tra giua ky : '));
+            let c = parseInt(prompt('Nhap diem bai kiem tra cuoi ky : '));
+            if (a<11 && b<11 && c<11){
+                let d = (a+b+c)/3;
+                if (d>=8){
+                    alert('ban la hoc sinh gioi')
+                }else if (d>=6){
+                    alert('ban la hoc sinh kha')
+                }else if (d>=5){
+                    alert('normal')
+                }else{
+                    alert('hoc qia kem')
+                }
+            } else{
+                alert('nhap sai');
+                btap5();
+            }
+        }
+        
+        function btap4() {
+            let a = prompt('Nhap so thu 1 : ');
+            let b = prompt('Nhap so thu 2 : ');
+            let c = prompt('Nhap so thu 3 : ');
+
+            if (a>b){
+                if(a>c){
+                    alert(a + " la so lon nhat .")
+                } else {
+                    alert(c + " la so lon nhat .")
+                }
+            } else {
+                if(b>c){
+                    alert(b + ' la so lon nhat .')
+                }else{
+                    alert(c + " la so lon nhat .")
+                }
+            }
+        }
+
+        function btap1() {
+            let a = prompt('Nhap so thu 1 :');
+            let b = prompt('Nhap so thu 2 :');
+
+            if (a%b==0){
+                alert(a + ' chia het cho ' + b);
+            } else {
+                alert(a + ' khong chia het cho ' + b);
+            }
+        }
+
+        function btap2() {
+            let a = prompt('Nhap tuoi cua ban : ');
+
+            if (a != 15){
+                alert('tuoi cua ban khong dung de vao lop 10');
+            }
+        }
+        
+        function btap3() {
+            let a = prompt('Nhap 1 so nguyen bat ky : ');
+            if (a>0){
+                alert(a + ' lon hon 0 .')
+            } else if (a<0) {
+                alert(a + ' nho hon 0 .')
+            } else {
+
+            }
+        }
+    </script>
+</body>
+</html>
